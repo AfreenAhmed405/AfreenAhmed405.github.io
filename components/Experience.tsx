@@ -1,6 +1,7 @@
 import React from 'react'
 import {HoverEffect} from './ui/CardHoverEffect'
 import { GlowingStarsBackgroundCard, GlowingStarsTitle, GlowingStarsDescription } from './ui/GlowingStars'
+import { workExperience } from '../data'
 
 const Experience = () => {
   return (
@@ -9,36 +10,12 @@ const Experience = () => {
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="mx-auto px-8">
-        <HoverEffect items={projects} />
+      <div className="mx-auto">
+        <HoverEffect items={workExperience} />
       </div>
     </div>
   )
 }
-
-export const projects = [
-    {
-      title: "Stripe",
-      subtitle: "Software Engineer Intern",
-      description:
-        "A technology company that builds economic infrastructure for the internet.",
-      link: "https://stripe.com",
-    },
-    {
-      title: "Netflix",
-      subtitle: "Software Engineer Intern",
-      description:
-        "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-      link: "https://netflix.com",
-    },
-    {
-      title: "Google",
-      subtitle: "Software Engineer Intern",
-      description:
-        "A multinational technology company that specializes in Internet-related services and products. A multinational technology company that specializes in Internet-related services and products. A multinational technology company that specializes in Internet-related services and products. A multinational technology company that specializes in Internet-related services and products.",
-      link: "https://google.com",
-    },
-  ];
 
   const Icon = () => {
     return (
