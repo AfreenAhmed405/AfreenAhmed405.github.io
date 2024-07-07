@@ -83,7 +83,7 @@ export const navItems = [
       title: "NodeAuthHub - Comprehensive User Authentication and Session Management ",
       des: "An Express.js backend application designed for robust user authentication, session management, and product information handling.",
       iconLists: ["/nodejs.svg", "/expressjs.svg", "/mongo.svg", "/passportjs.svg"],
-      link: "https://github.com/adrianhajdin/zoom-clone",
+      link: "https://github.com/Prajapdh/NodeAuthHub",
       liveLink: "",
     },
     {
@@ -103,37 +103,6 @@ export const navItems = [
       liveLink: "",
     },
   ];
-  
-  // export const workExperience = [
-  //   {
-  //     id: 1,
-  //     title: "Frontend Engineer Intern",
-  //     desc: "Developed a cross-platform mobile application using .NET MAUI and Blazor, enhancing user experience across multiple OS platforms. Led the integration of services and UI components with Bootstrap, GraphQL, and Strapi CMS, boosting dynamic content management and real-time updates.",
-  //     className: "md:col-span-2",
-  //     thumbnail: "/exp1.svg",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "Mobile App Dev - JSM Tech",
-  //     desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-  //     className: "md:col-span-2", // change to md:col-span-2
-  //     thumbnail: "/exp2.svg",
-  //   },
-  //   {
-  //     id: 3,
-  //     title: "Freelance App Dev Project",
-  //     desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-  //     className: "md:col-span-2", // change to md:col-span-2
-  //     thumbnail: "/exp3.svg",
-  //   },
-  //   {
-  //     id: 4,
-  //     title: "Lead Frontend Developer",
-  //     desc: "Developed and maintained user-facing features using modern frontend technologies.",
-  //     className: "md:col-span-2",
-  //     thumbnail: "/exp4.svg",
-  //   },
-  // ];
 
 export const workExperience = [
     {

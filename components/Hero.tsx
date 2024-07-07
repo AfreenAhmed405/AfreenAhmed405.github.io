@@ -39,7 +39,7 @@ const Hero = () => {
           </p>
           <a href="https://github.com/Prajapdh?tab=repositories" className="text-center" target="_blank">
             <MagicButton
-              title="Show my work"
+              title="See my work"
               icon={<FaLocationArrow />}
               position="right"
             />

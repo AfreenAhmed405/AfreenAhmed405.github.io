@@ -4,6 +4,10 @@ import { Button } from './ui/MovingBorder'
 import { IoLogoGithub } from 'react-icons/io5'
 
 const Footer = () => {
+  const handleDownload = () => {
+    window.location.href = '/Daksh_Prajapati_Resume.pdf';
+  };
+
   return (
     <div className="h-[40rem] w-full rounded-md relative" id='Resume'>
       <h1 className="heading">  
@@ -14,15 +18,14 @@ const Footer = () => {
         <p className='text-center lg:text-2xl text-xl sm:text-sm md:font-normal font-semibold lg:pb-[5rem] p-[3rem]'>
             Learn about my journey, my skills, and my experience. I am always looking for new opportunities to learn and grow.
         </p>
-        <a href='https://github.com/Prajapdh/Resume/tree/main' target="_blank">
           <Button
               borderRadius="1.75rem"
               duration={Math.floor(Math.random() * 100) + 5000}
               className="text-xl lg:text-2xl sm:text-lg py-3 px-5 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 hover:cursor-pointer"
+              onClick={handleDownload}
           >
               Download My Resume
           </Button>
-        </a>
         
       </div>
 
