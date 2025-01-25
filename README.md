@@ -1,7 +1,7 @@
 # Personal Portfolio Site
 > Welcome to my personal portfolio website! This project showcases my skills, projects, and achievements in web development and design.
 
-![Capture]([https://github.com/user-attachments/assets/ce8cdedd-02fd-4cf9-8c04-a64cc5e7a1a7](https://github.com/AfreenAhmed405/AfreenAhmed405.github.io/blob/79992b7d861cf6237f5e6cf90e2b45ae1b0fefbc/Image.png))
+![Capture](Image.png)
 
 ## 🚀 Features
 - **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
