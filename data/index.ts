@@ -49,7 +49,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Currently learning about LLMs and Generative AI",
+      title: "Passionate about understanding the transformative power of LLMs and Generative AI",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -70,8 +70,40 @@ export const navItems = [
   ];
   
   export const projects = [
-    {
+        {
       id: 1,
+      title: "ChatPDF - Chat with your PDFs",
+      des: "An AI-powered application that allows users to interact with PDF documents through a chat interface.",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
+      link: "https://github.com/Prajapdh/chat-with-pdf",
+      liveLink: "https://chat-with-pdf-liart.vercel.app/",
+    },
+    {
+      id: 2,
+      title: "InterviewFlow - Video Interview Platform",
+      des: "A real-time video interview platform with screen sharing, live coding assessments, and automated recordings to eliminate scheduling conflicts.",
+      iconLists: ["/nodejs.svg", "/expressjs.svg", "/mongo.svg", "/passportjs.svg"],
+      link: "https://github.com/Prajapdh/interviewflow",
+      liveLink: "https://interviewflow.vercel.app/",
+    },
+    {
+      id: 3,
+      title: "Toronto Cupcakes Website Redesign",
+      des: "A redesign of the Toronto Cupcakes website using Svelte.js.",
+      iconLists: ["/nodejs.svg", "/expressjs.svg", "/mongo.svg", "/passportjs.svg"],
+      link: "https://github.com/Prajapdh/TorontoCupcakesRedesign",
+      liveLink: "https://toronto-cupcakes-redesign.vercel.app/",
+    },
+    {
+      id: 5,
+      title: "ShinobiFetch - Naruto Fandom Scrapper",
+      des: "A Node.js scraper that fetches and stores Naruto anime data (characters, clans, jutsu, and episodes) in MongoDB.",
+      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
+      link: "https://github.com/Prajapdh/ShinobiFetch",
+      liveLink: "",
+    },
+    {
+      id: 4,
       title: "FinTrack - Finance Dashboard App",
       des: "Track your company's finances with FinTrack. Monitor expenses, revenue, and more with this all-in-one dashboard app.",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
@@ -79,47 +111,33 @@ export const navItems = [
       liveLink: "",
     },
     {
-      id: 2,
-      title: "NodeAuthHub - Comprehensive User Authentication and Session Management ",
-      des: "An Express.js backend application designed for robust user authentication, session management, and product information handling.",
-      iconLists: ["/nodejs.svg", "/expressjs.svg", "/mongo.svg", "/passportjs.svg"],
-      link: "https://github.com/Prajapdh/NodeAuthHub",
-      liveLink: "",
-    },
-    {
-      id: 3,
+      id: 6,
       title: "Monkey Finder - Find Nearby Monkeys",
       des: "A .NET MAUI app that uses geolocation to find monkeys near you. Built with .NET MAUI, and Blazor",
       iconLists: ["/dotnetcore.svg", "/xamarin.svg", '/blazor.svg'],
       link: "https://github.com/Prajapdh/MonkeyFinder",
       liveLink: "",
     },
-    {
-      id: 4,
-      title: "React Job Portal - Dynamic and Responsive Job Listing Platform",
-      des: "The React Job Portal allows users to view, add, and edit job listings. It features a responsive design with TailwindCSS, state management using Redux, and backend data handling through a JSON server.",
-      iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg"],
-      link: "https://github.com/Prajapdh/ReactJobPortal",
-      liveLink: "",
-    },
+    
+    
   ];
 
 export const workExperience = [
     {
       id:1,
-      title: "Schneider Electric",
-      subtitle: "Systems Engineer Intern",
-      description:
-        "Modernized an MVC project from .NET4 to .NET 7, enhancing efficiency and scalability. Optimized database interactions and refactored code using Entity Framework and LINQ, and enhanced UI with TailwindCSS and jQuery. Additionally, streamlined operations by designing VBA macros and managed the migration of Tableau dashboards to cloud solutions.",
-      link: "https://www.se.com/ww/en/",
-    },
-    {
-      id:2,
       title: "Cincinnati Children's Hospital",
       subtitle: "Software Engineer Intern",
       description:
         "Developed a cross-platform mobile application using .NET MAUI and Blazor, enhancing user experience across multiple OS platforms. Led the integration of services and UI components with Bootstrap, GraphQL, and Strapi CMS, boosting dynamic content management and real-time updates.",
       link: "https://www.cincinnatichildrens.org/",
+    },
+    {
+      id:2,
+      title: "Schneider Electric",
+      subtitle: "Systems Engineer Intern",
+      description:
+        "Modernized an MVC project from .NET4 to .NET 7, enhancing efficiency and scalability. Optimized database interactions and refactored code using Entity Framework and LINQ, and enhanced UI with TailwindCSS and jQuery. Additionally, streamlined operations by designing VBA macros and managed the migration of Tableau dashboards to cloud solutions.",
+      link: "https://www.se.com/ww/en/",
     },
     {
       id:3,

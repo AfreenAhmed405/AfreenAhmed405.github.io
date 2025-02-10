@@ -35,7 +35,7 @@ const Hero = () => {
             words="From Concept to Code, Creating Impactful Web Solutions that Perform" />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m Daksh, a Full Stack Developer based in Cincinnati, Ohio.
+            Hi, I&apos;m Daksh, a Full Stack Developer who loves turning complex ideas into high-performing applications.
           </p>
           <a href="https://github.com/Prajapdh?tab=repositories" className="text-center" target="_blank">
             <MagicButton

@@ -1,8 +1,11 @@
 import { gridItems } from '@/data'
-import React from 'react'
+import {useEffect} from 'react'
 import { BentoGrid,BentoGridItem } from './ui/BentoGrid'
 
 const Grid = () => {
+    useEffect(() => {
+        console.log(`gridItems length: ${gridItems.length}`)
+    }, [])
     return (
         <section id='about'>
             <BentoGrid className="w-full py-20">
