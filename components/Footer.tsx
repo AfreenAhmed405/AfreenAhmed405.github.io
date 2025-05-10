@@ -5,7 +5,9 @@ import { IoLogoGithub } from 'react-icons/io5'
 
 const Footer = () => {
   const handleDownload = () => {
-    window.location.href = '/Daksh_Prajapati_Resume.pdf';
+    if (typeof window !== 'undefined') {
+      window.location.href = '/Daksh_Prajapati_Resume.pdf';
+    }
   };
 
   return (

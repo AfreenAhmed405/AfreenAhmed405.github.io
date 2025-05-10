@@ -9,17 +9,20 @@ import { navItems } from "@/data";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import ClientOnly from "@/components/ui/ClientOnly";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
-      <FloatingNav className="" navItems={navItems}/>
-      <Hero />
-      <Grid />
-      <RecentProjects />
-      <Experience />
-      <Contact />
-      <Footer />
-    </main>
+    <ClientOnly>
+      <main className="relative bg-black-100 flex justify-center items-center flex-col overflow-clip mx-auto sm:px-10 px-5">
+        <FloatingNav className="" navItems={navItems}/>
+        <Hero />
+        <Grid />
+        <RecentProjects />
+        <Experience />
+        <Contact />
+        <Footer />
+      </main>
+    </ClientOnly>
   );
 }
