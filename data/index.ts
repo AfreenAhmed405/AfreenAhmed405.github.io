@@ -1,5 +1,6 @@
 export const navItems = [
     { name: "About", link: "#about" },
+    { name: "Tech Stack", link: "#tech-stack" },
     { name: "Projects", link: "#projects" },
     { name: "Experience", link: "#Experience" },
     { name: "Contact", link: "#Contact" },
@@ -123,28 +124,52 @@ export const navItems = [
   ];
 
 export const workExperience = [
-    {
-      id:1,
-      title: "Cincinnati Children's Hospital",
-      subtitle: "Software Engineer Intern",
-      description:
-        "Developed a cross-platform mobile application using .NET MAUI and Blazor, enhancing user experience across multiple OS platforms. Led the integration of services and UI components with Bootstrap, GraphQL, and Strapi CMS, boosting dynamic content management and real-time updates.",
-      link: "https://www.cincinnatichildrens.org/",
-    },
-    {
-      id:2,
-      title: "Schneider Electric",
-      subtitle: "Systems Engineer Intern",
-      description:
-        "Modernized an MVC project from .NET4 to .NET 7, enhancing efficiency and scalability. Optimized database interactions and refactored code using Entity Framework and LINQ, and enhanced UI with TailwindCSS and jQuery. Additionally, streamlined operations by designing VBA macros and managed the migration of Tableau dashboards to cloud solutions.",
-      link: "https://www.se.com/ww/en/",
-    },
-    {
-      id:3,
-      title: "Learning Commons",
-      subtitle: "Content Peer Tutor",
-      description:
-        "Provided tailored academic support to over 200 students, improving their understanding in Physics and Math through personalized sessions and active learning activities. Conducted weekly review sessions that fostered a collaborative learning environment.",
-      link: "https://www.uc.edu/campus-life/learning-commons.html",
-    },
+  {
+    title: "Software Engineering Intern",
+    subtitle: "Cincinnati Children's Hospital",
+    description:
+      "Worked across two agile teams (Caren and Acushift), contributing to the development and refactoring of reusable components in Blazor and React, improving frontend efficiency and user experience. Boosted test coverage and reduced development overhead through strategic architecture decisions.",
+    link: "#", // Optional: You can replace this with a blog/project link if you want
+    duration: "Aug 2023 – Aug 2024",
+    type: "Internship",
+    responsibilities: [
+      "Developed cross-platform mobile app using .NET MAUI and Blazor, reducing dev time by 25%",
+      "Refactored 50+ reusable components using Material UI and GraphQL",
+      "Increased unit test coverage by 40% using bUnit for robust testing",
+      "Contributed to both Caren and Acushift teams, delivering ahead of deadlines"
+    ],
+    technologies: ["Blazor", ".NET MAUI", "React", "GraphQL", "TypeScript", "Strapi", "bUnit"]
+  },
+  {
+    title: "Systems Engineering Intern",
+    subtitle: "Schneider Electric",
+    description:
+      "Modernized legacy applications and built an internal tool for managing employee data across Ohio state branches. Improved codebase performance and accessibility while streamlining key operations with automation and cloud migration.",
+    link: "#",
+    duration: "Jan 2023 – May 2023",
+    type: "Internship",
+    responsibilities: [
+      "Migrated MVC project from .NET 4 to .NET 7 Core for better performance",
+      "Launched internal tool used across Ohio branches for employee data",
+      "Refactored database access with Entity Framework and LINQ",
+      "Automated label sorting using VBA macros, saving 50% processing time"
+    ],
+    technologies: [".NET", "C#", "MVC", "Entity Framework", "LINQ", "VBA", "SQL", "Tableau"]
+  },
+  {
+    title: "Data Engineering Intern",
+    subtitle: "Future Wellness Group",
+    description:
+      "Worked on large-scale healthcare datasets to improve the accuracy of predictive models for chronic illness. Designed data processing pipelines and statistical reports, enabling actionable insights into patient trends.",
+    link: "#",
+    duration: "May 2022 – Aug 2022",
+    type: "Internship",
+    responsibilities: [
+      "Preprocessed and engineered features for over 500,000 patient records",
+      "Built ML pipelines to support chronic disease prediction models",
+      "Performed statistical analyses on demographic healthcare data",
+      "Enhanced model performance and reliability with optimized datasets"
+    ],
+    technologies: ["Python", "Pandas", "NumPy", "Scikit-learn", "Jupyter Lab", "SQL", "AWS", "Docker", "Airflow", "Kubernetes", "Airflow", "Kubernetes"]
+  }
   ];

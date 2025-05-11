@@ -118,21 +118,29 @@ export function Globe({ globeConfig, data }: WorldProps) {
     let points = [];
     for (let i = 0; i < arcs.length; i++) {
       const arc = arcs[i];
-      const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.startLat,
-        lng: arc.startLng,
-      });
-      points.push({
-        size: defaultProps.pointSize,
-        order: arc.order,
-        color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
-        lat: arc.endLat,
-        lng: arc.endLng,
-      });
+      // Validate coordinates to avoid NaN values
+      if (
+        !isNaN(arc.startLat) && !isNaN(arc.startLng) && 
+        !isNaN(arc.endLat) && !isNaN(arc.endLng) && 
+        arc.startLat !== undefined && arc.startLng !== undefined &&
+        arc.endLat !== undefined && arc.endLng !== undefined
+      ) {
+        const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
+        points.push({
+          size: defaultProps.pointSize,
+          order: arc.order,
+          color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+          lat: arc.startLat,
+          lng: arc.startLng,
+        });
+        points.push({
+          size: defaultProps.pointSize,
+          order: arc.order,
+          color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
+          lat: arc.endLat,
+          lng: arc.endLng,
+        });
+      }
     }
 
     // remove duplicates for same lat and lng
@@ -167,8 +175,15 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
 
+    // Filter out invalid data
+    const validArcs = data.filter(arc => 
+      !isNaN(arc.startLat) && !isNaN(arc.startLng) && 
+      !isNaN(arc.endLat) && !isNaN(arc.endLng) &&
+      !isNaN(arc.arcAlt)
+    );
+
     globeRef.current
-      .arcsData(data)
+      .arcsData(validArcs)
       .arcStartLat((d) => (d as { startLat: number }).startLat * 1)
       .arcStartLng((d) => (d as { startLng: number }).startLng * 1)
       .arcEndLat((d) => (d as { endLat: number }).endLat * 1)
@@ -185,9 +200,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashGap(15)
       .arcDashAnimateTime((e) => defaultProps.arcTime);
 
+    // Use validated data points
+    const validPoints = globeData.filter(point => 
+      !isNaN(point.lat) && !isNaN(point.lng)
+    );
+
     globeRef.current
-      .pointsData(data)
-      .pointColor((e) => (e as { color: string }).color)
+      .pointsData(validPoints)
+      .pointColor((e) => (e as unknown as { color: (t: number) => string }).color(1))
       .pointsMerge(true)
       .pointAltitude(0.0)
       .pointRadius(2);
@@ -235,9 +255,32 @@ export function WebGLRendererConfig() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      gl.setPixelRatio(window.devicePixelRatio);
-      gl.setSize(size.width, size.height);
-      gl.setClearColor(0xffaaff, 0);
+      try {
+        gl.setPixelRatio(window.devicePixelRatio || 1);
+        gl.setSize(size.width, size.height);
+        gl.setClearColor(0xffaaff, 0);
+        
+        // Improve error handling for WebGL
+        gl.getContext().getExtension('OES_standard_derivatives');
+        
+        // Disable console warnings for common THREE.js issues
+        const originalWarn = console.warn;
+        console.warn = function(...args: any[]) {
+          const message = args[0];
+          if (typeof message === 'string' && 
+              (message.includes('THREE.BufferGeometry.computeBoundingSphere') || 
+               message.includes('THREE.WebGLRenderer'))) {
+            return;
+          }
+          return originalWarn.apply(console, args);
+        };
+        
+        return () => {
+          console.warn = originalWarn;
+        };
+      } catch (error) {
+        console.error('Error initializing WebGL renderer:', error);
+      }
     }
   }, [gl, size.width, size.height]);
 

@@ -3,44 +3,86 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from './ui/CanvasRevealEffect'
 import { IoLogoGithub, IoLogoLinkedin  } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
+import { Badge } from './ui/Badge';
 
 const Contact = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  }
+
   return (
     <div className="w-full py-20" id='Contact'>
-      <h1 className="heading">
-        My <span className="text-purple">Contact</span>
-      </h1>
-      <div className="my-20 w-[70vw] flex flex-col lg:flex-row items-center justify-center gap-4 mx-auto">
-        <a href='https://www.linkedin.com/in/dakshprajapati/' className='w-full h-full' target="_blank">
-            <Card title="@dakshprajapati" icon={<LinkedinIcon />}>
-                <CanvasRevealEffect
-                    animationSpeed={5.1}
-                    containerClassName="bg-emerald-900"
-                />
-            </Card>
-        </a>
-        <a href='mailto:daksh.h.prajapati12@gmail.com' className='w-full h-full'>
-            <Card title="daksh.h.prajapati12@gmail.com" icon={<EmailIcon />}>
-                <CanvasRevealEffect
-                    animationSpeed={3}
-                    containerClassName="bg-black"
-                    colors={[
-                    [236, 72, 153],
-                    [232, 121, 249],
-                    ]}
-                    dotSize={2}
-                />
-            </Card>
-        </a>
-        <a href='https://github.com/Prajapdh' className='w-full h-full' target="_blank">
-            <Card title="@prajapdh" icon={<GithubIcon/>} >
-                <CanvasRevealEffect
-                    animationSpeed={3}
-                    containerClassName="bg-sky-600"
-                    colors={[[125, 211, 252]]}
-                />
-            </Card>
-        </a>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        variants={fadeIn}
+        className="text-center mb-10"
+      >
+        <h1 className="heading">
+          My <span className="text-purple">Contact</span>
+        </h1>
+      </motion.div>
+
+      <div className="my-10 w-[70vw] flex flex-col lg:flex-row items-center justify-center gap-4 mx-auto">
+        <motion.a 
+          href='https://www.linkedin.com/in/dakshprajapati/' 
+          className='w-full h-full' 
+          target="_blank"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          variants={fadeIn}
+        >
+          <Card title="@dakshprajapati" icon={<LinkedinIcon />}>
+            <CanvasRevealEffect
+              animationSpeed={5.1}
+              containerClassName="bg-emerald-900"
+            />
+          </Card>
+        </motion.a>
+        <motion.a 
+          href='mailto:daksh.h.prajapati12@gmail.com' 
+          className='w-full h-full'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={fadeIn}
+        >
+          <Card title="daksh.h.prajapati12@gmail.com" icon={<EmailIcon />}>
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-black"
+              colors={[
+                [236, 72, 153],
+                [232, 121, 249],
+              ]}
+              dotSize={2}
+            />
+          </Card>
+        </motion.a>
+        <motion.a 
+          href='https://github.com/Prajapdh' 
+          className='w-full h-full' 
+          target="_blank"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          variants={fadeIn}
+        >
+          <Card title="@prajapdh" icon={<GithubIcon/>} >
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-sky-600"
+              colors={[[125, 211, 252]]}
+            />
+          </Card>
+        </motion.a>
       </div>
     </div>
   )
