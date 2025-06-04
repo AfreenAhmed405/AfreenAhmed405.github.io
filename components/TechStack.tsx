@@ -66,103 +66,104 @@ export default function TechStack() {
   }
 
   const technologies = {
-    languages: {
-      icon: <Code2 className="h-6 w-6" />,
-      title: "Programming Languages",
-      description: "Core languages for system, web, and AI development",
-      skills: [
-        { name: "C++", level: 90 },
-        { name: "C", level: 85 },
-        { name: "Java", level: 88 },
-        { name: "C#", level: 80 },
-        { name: "Python", level: 90 },
-        { name: "JavaScript", level: 90 },
-        { name: "TypeScript", level: 92 },
-        { name: "SQL", level: 85 },
-        { name: "HTML/CSS", level: 95 },
-        { name: "MATLAB", level: 70 },
-      ],
-    },
-    concepts: {
-      icon: <Binary className="h-6 w-6" />,
-      title: "Engineering Concepts",
-      description: "Solid foundation in software and system architecture",
-      skills: [
-        { name: "Data Structures", level: 95 },
-        { name: "Algorithms", level: 90 },
-        { name: "OOP", level: 95 },
-        { name: "Design Patterns", level: 85 },
-        { name: "System Design", level: 85 },
-        { name: "Multithreading", level: 80 },
-      ],
-    },
-    frontend: {
-      icon: <Layout className="h-6 w-6" />,
-      title: "Frontend Development",
-      description: "Modern, responsive UI development with robust tooling",
-      skills: [
-        { name: "React", level: 90 },
-        { name: "Next.js", level: 90 },
-        { name: "Svelte", level: 75 },
-        { name: "Tailwind CSS", level: 95 },
-        { name: "Blazor", level: 80 },
-        { name: "MAUI", level: 78 },
-        { name: "Figma", level: 80 },
-      ],
-    },
-    backend: {
-      icon: <Server className="h-6 w-6" />,
-      title: "Backend Development",
-      description: "Efficient APIs and server-side logic",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express", level: 80 },
-        { name: "Spring Boot", level: 82 },
-        { name: "Ruby on Rails", level: 75 },
-        { name: ".NET Core", level: 90 },
-        { name: "GraphQL", level: 80 },
-      ],
-    },
-    database: {
-      icon: <Database className="h-6 w-6" />,
-      title: "Database Systems",
-      description: "Experience with relational and NoSQL databases",
-      skills: [
-        { name: "MongoDB", level: 85 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MySQL", level: 75 },
-        { name: "Redis", level: 70 },
-      ],
-    },
-    tools: {
-      icon: <Wrench className="h-6 w-6" />,
-      title: "Development Tools",
-      description: "Tooling for modern development and deployment",
-      skills: [
-        { name: "Git", level: 95 },
-        { name: "Docker", level: 90 },
-        { name: "AWS", level: 85 },
-        { name: "GCP", level: 80 },
-        { name: "Azure", level: 80 },
-        { name: "Linux/Unix", level: 85 },
-        { name: "Jira", level: 80 },
-        { name: "CI/CD", level: 75 },
-      ],
-    },
-    ai: {
-      icon: <Brain className="h-6 w-6" />,
-      title: "AI & Data Science",
-      description: "Applied machine learning and data analysis",
-      skills: [
-        { name: "PyTorch", level: 70 },
-        { name: "Scikit-learn", level: 75 },
-        { name: "LangChain", level: 90 },
-        { name: "Pandas/Numpy", level: 90 },
-        { name: "RAG", level: 90 },
-        { name: "Tableau", level: 85 },
-      ],
-    },
-  }
+  languages: {
+    icon: <Code2 className="h-6 w-6" />,
+    title: "Programming Languages",
+    description: "Core languages for system, web, and AI development",
+    skills: [
+      { name: "Python", level: 95 },
+      { name: "HTML/CSS", level: 95 },
+      { name: "C#", level: 90 },
+      { name: "TypeScript", level: 90 },
+      { name: "C++", level: 90 },
+      { name: "JavaScript", level: 85 },
+      { name: "SQL", level: 85 },
+      { name: "C", level: 80 },
+      { name: "Java", level: 70 },
+      { name: "MATLAB", level: 70 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  concepts: {
+    icon: <Binary className="h-6 w-6" />,
+    title: "Engineering Concepts",
+    description: "Solid foundation in software and system architecture",
+    skills: [
+      { name: "Data Structures", level: 95 },
+      { name: "OOP", level: 95 },
+      { name: "Algorithms", level: 90 },
+      { name: "System Design", level: 70 },
+      { name: "Design Patterns", level: 65 },
+      { name: "Multithreading", level: 60 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  frontend: {
+    icon: <Layout className="h-6 w-6" />,
+    title: "Frontend Development",
+    description: "Modern, responsive UI development with robust tooling",
+    skills: [
+      { name: "React", level: 95 },
+      { name: "Tailwind CSS", level: 95 },
+      { name: "Next.js", level: 90 },
+      { name: "Blazor", level: 80 },
+      { name: "Bootstrap", level: 80 },
+      { name: "Svelte", level: 75 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  backend: {
+    icon: <Server className="h-6 w-6" />,
+    title: "Backend Development",
+    description: "Efficient APIs and server-side logic",
+    skills: [
+      { name: ".NET Core", level: 90 },
+      { name: "Node.js", level: 90 },
+      { name: "REST APIs", level: 90 },
+      { name: "Express", level: 80 },
+      { name: "Spring Boot", level: 75 },
+      { name: "GraphQL", level: 70 },
+      { name: "Ruby on Rails", level: 50 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  database: {
+    icon: <Database className="h-6 w-6" />,
+    title: "Database Systems",
+    description: "Experience with relational and NoSQL databases",
+    skills: [
+      { name: "MongoDB", level: 95 },
+      { name: "MySQL", level: 85 },
+      { name: "PostgreSQL", level: 80 },
+      { name: "Redis", level: 70 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  tools: {
+    icon: <Wrench className="h-6 w-6" />,
+    title: "Development Tools",
+    description: "Tooling for modern development and deployment",
+    skills: [
+      { name: "Git", level: 95 },
+      { name: "Docker", level: 95 },
+      { name: "AWS", level: 85 },
+      { name: "GCP", level: 85 },
+      { name: "Linux/Unix", level: 90 },
+      { name: "Azure", level: 80 },
+      { name: "Jira", level: 80 },
+      { name: "Figma", level: 80 },
+      { name: "CI/CD", level: 75 },
+    ].sort((a, b) => b.level - a.level),
+  },
+  ai: {
+    icon: <Brain className="h-6 w-6" />,
+    title: "AI & Data Science",
+    description: "Applied machine learning and data analysis",
+    skills: [
+      { name: "LangChain", level: 90 },
+      { name: "Pandas/Numpy", level: 90 },
+      { name: "RAG", level: 90 },
+      { name: "Tableau", level: 85 },
+      { name: "PyTorch", level: 70 },
+      { name: "Scikit-learn", level: 65 },
+    ].sort((a, b) => b.level - a.level),
+  },
+}
   
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -184,6 +185,9 @@ export default function TechStack() {
           <h1 className='heading'>
             Tech <span className='text-purple'>Stack</span>
           </h1>
+          <p className="pt-2 text-muted-foreground max-w-2xl mx-auto">
+            These percentages represent my current proficiency and hands-on comfort level with each technology
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">

@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Daksh Prajapati | Software Developer",
-  description: "Explore the portfolio of Daksh Prajapati, a Full-Stack Developer specializing in .NET and MERN Stack technologies. Discover projects, professional insights, and innovative solution.",
+  description: "Explore the portfolio of Daksh Prajapati, a Full-Stack Developer specializing in MERN Stack and AI technologies. Discover projects, professional insights, and innovative solution.",
 };
 
 export default function RootLayout({

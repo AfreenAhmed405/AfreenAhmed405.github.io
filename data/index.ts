@@ -14,7 +14,7 @@ export const navItems = [
       className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
       imgClassName: "w-full h-full",
       titleClassName: "justify-end",
-      img: "/b1.svg",
+      img: "/HeroSectionImage.svg",
       spareImg: "",
     },
     {
@@ -29,7 +29,7 @@ export const navItems = [
     },
     {
       id: 3,
-      title: "My tech stack",
+      title: "My Edge",
       description: "I constantly try to improve",
       className: "lg:col-span-2 md:col-span-3 md:row-span-2",
       imgClassName: "",
@@ -50,7 +50,7 @@ export const navItems = [
   
     {
       id: 5,
-      title: "Passionate about understanding the transformative power of LLMs and Generative AI",
+      title: "Passionate about understanding the transformative power of LLMs and Model Context Protocols",
       description: "The Inside Scoop",
       className: "md:col-span-3 md:row-span-2",
       imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
