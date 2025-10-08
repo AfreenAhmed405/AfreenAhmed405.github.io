@@ -4,7 +4,7 @@ const nextConfig = {
     typescript: {
         ignoreBuildErrors: true,
     },
-    // Disable server-side rendering for static export
+    // Disable server-side rennpdering for static export
     images: {
         unoptimized: true,
     },

@@ -13,7 +13,7 @@ import TechStack from "@/components/TechStack";
 
 export default function Home() {
   return (
-    <ClientOnly>
+    // <ClientOnly>
       <main className="relative flex justify-center items-center flex-col overflow-clip mx-auto">
         <FloatingNav className="" navItems={navItems}/>
         <Hero />
@@ -25,6 +25,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </main>
-    </ClientOnly>
+    // {/* </ClientOnly> */}
   );
 }
