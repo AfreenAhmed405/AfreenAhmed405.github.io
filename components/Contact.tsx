@@ -3,7 +3,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from './ui/CanvasRevealEffect'
 import { IoLogoGithub, IoLogoLinkedin  } from "react-icons/io";
 import { MdEmail } from "react-icons/md";
-import { Badge } from './ui/Badge';
 
 const Contact = () => {
   const fadeIn = {
@@ -12,7 +11,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="w-full py-20" id='Contact'>
+    <section className="w-full py-20 bg-[conic-gradient(at_top_left,_#fce7f3,_#f3e8ff,_#fde68a,_#fce7f3)]" id='Contact'>
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -22,38 +21,22 @@ const Contact = () => {
         className="text-center mb-10"
       >
         <h1 className="heading">
-          My <span className="text-purple">Contact</span>
+          My <span className="text-pink-500">Contact</span>
         </h1>
       </motion.div>
 
       <div className="my-10 w-[70vw] flex flex-col lg:flex-row items-center justify-center gap-4 mx-auto">
         <motion.a 
-          href='https://www.linkedin.com/in/dakshprajapati/' 
+          href='https://www.linkedin.com/in/afreen-ahmed-2001/' 
           className='w-full h-full' 
           target="_blank"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          variants={fadeIn}
-        >
-          <Card title="@dakshprajapati" icon={<LinkedinIcon />}>
-            <CanvasRevealEffect
-              animationSpeed={5.1}
-              containerClassName="bg-emerald-900"
-            />
-          </Card>
-        </motion.a>
-        <motion.a 
-          href='mailto:daksh.h.prajapati12@gmail.com' 
-          className='w-full h-full'
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
           variants={fadeIn}
         >
-          <Card title="daksh.h.prajapati12@gmail.com" icon={<EmailIcon />}>
+          <Card title="@afreen-ahmed-2001" icon={<LinkedinIcon />}>
             <CanvasRevealEffect
               animationSpeed={3}
               containerClassName="bg-black"
@@ -61,12 +44,31 @@ const Contact = () => {
                 [236, 72, 153],
                 [232, 121, 249],
               ]}
-              dotSize={2}
             />
           </Card>
         </motion.a>
         <motion.a 
-          href='https://github.com/Prajapdh' 
+          href='mailto:mail.afreenahmed@gmail.com' 
+          className='w-full h-full'
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          variants={fadeIn}
+        >
+          <Card title="mail.afreenahmed@gmail.com" icon={<EmailIcon />}>
+            <CanvasRevealEffect
+              animationSpeed={3}
+              containerClassName="bg-black"
+              colors={[
+                [236, 72, 153],
+                [232, 121, 249],
+              ]}
+            />
+          </Card>
+        </motion.a>
+        <motion.a 
+          href='https://github.com/AfreenAhmed405' 
           className='w-full h-full' 
           target="_blank"
           initial="hidden"
@@ -75,16 +77,19 @@ const Contact = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           variants={fadeIn}
         >
-          <Card title="@prajapdh" icon={<GithubIcon/>} >
+          <Card title="@AfreenAhmed405" icon={<GithubIcon/>} >
             <CanvasRevealEffect
               animationSpeed={3}
-              containerClassName="bg-sky-600"
-              colors={[[125, 211, 252]]}
+              containerClassName="bg-black"
+              colors={[
+                [236, 72, 153],
+                [232, 121, 249],
+              ]}
             />
           </Card>
         </motion.a>
       </div>
-    </div>
+    </section>
   )
 }
 
@@ -103,11 +108,11 @@ const Card = ({
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[35rem]"
+        className="border border-black/[0.2] group/canvas-card flex items-center justify-center dark:border-white/[0.2]  max-w-sm w-full mx-auto p-4 relative lg:h-[14rem]"
         style={{
             //   add these two
             //   you can generate the color from here https://cssgradient.io/
-            background: "rgb(4,7,29)",
+            background: "rgba(255, 255, 255, 1)",
             backgroundColor:
               "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
           }}
@@ -144,8 +149,8 @@ const Card = ({
   const GithubIcon = () => {
     return (
         <div className='flex flex-col justify-center items-center gap-4'>
-            <IoLogoGithub size={80}/>
-            <span className='lg:text-3xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>Github</span>
+            <IoLogoGithub size={50} className="text-pink-300"/>
+            <span className='lg:text-xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>Github</span>
 
         </div>
     );
@@ -154,8 +159,8 @@ const Card = ({
   const EmailIcon = () => {
     return (
         <div className='flex flex-col justify-center items-center gap-4'>
-            <MdEmail size={75}/>
-            <span className='lg:text-3xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>Email</span>
+            <MdEmail size={50} className="text-pink-300"/>
+            <span className='lg:text-xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>Email</span>
 
         </div>
     );
@@ -164,8 +169,8 @@ const Card = ({
   const LinkedinIcon = () => {
     return (
         <div className='flex flex-col justify-center items-center gap-4'>
-            <IoLogoLinkedin  size={80}/>
-            <span className='lg:text-3xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>LinkedIn</span>
+            <IoLogoLinkedin size={50} className="text-pink-300"/>
+            <span className='lg:text-xl md:text-2xl text-base line-clamp-1 font-bold tracking-wide mt-2'>LinkedIn</span>
 
         </div>
     );

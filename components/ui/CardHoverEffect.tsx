@@ -105,7 +105,7 @@ export const ExperienceCardEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.3] block rounded-xl z-0"
+                className="absolute inset-0 h-full w-full dark:bg-slate-800/[0.15] block rounded-xl z-0"
                 layoutId={`hoverBg-${idx}`}
                 initial={{ opacity: 0 }}
                 animate={{
@@ -122,11 +122,11 @@ export const ExperienceCardEffect = ({
 
           <div 
             className={cn(
-              "rounded-xl border overflow-hidden relative z-10 transition-all duration-300",
+              "rounded-xl border-pink-300 border-8 overflow-hidden relative z-10 transition-all duration-300",
               hoveredIndex === idx 
-                ? "border-purple/50 shadow-lg shadow-purple/10 border-2" 
+                ? "border-pink-300/50 shadow-lg shadow-pink/10 border-8" 
                 : "border-border bg-card shadow-sm"
-            )}
+            )}  
           >
             <div 
               className="flex flex-col md:flex-row md:items-center justify-between p-6 cursor-pointer"
@@ -134,7 +134,7 @@ export const ExperienceCardEffect = ({
             >
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-2">
-                  <Building2 className="h-5 w-5 text-purple" />
+                  <Building2 className="h-5 w-5 text-pink-400" />
                   <h3 className="text-xl font-bold text-foreground">{item.title}</h3>
                 </div>
                 <h4 className="text-lg font-semibold text-foreground/80 mb-2">{item.subtitle}</h4>
@@ -152,8 +152,8 @@ export const ExperienceCardEffect = ({
               </div>
               <div className="flex items-center mt-4 md:mt-0">
                 {expandedIndex === idx ? 
-                  <ChevronUp className="h-6 w-6 text-purple" /> : 
-                  <ChevronDown className="h-6 w-6 text-purple" />
+                  <ChevronUp className="h-6 w-6 text-pink-400" /> : 
+                  <ChevronDown className="h-6 w-6 text-pink-400" />
                 }
               </div>
             </div>

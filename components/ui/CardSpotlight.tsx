@@ -8,12 +8,14 @@ export const CardSpotlight = ({
   des,
   iconLists,
   link,
+  preview,
   liveLink,
 }: {
   title: string;
   des: string;
   iconLists?: Array<string>;
   link?: string;
+  preview?: string;
   liveLink?: string;
 }) => {
   const router = useRouter(); // Next.js router for navigation
@@ -68,13 +70,16 @@ export const CardSpotlight = ({
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 py-10 shadow-2xl cursor-pointer"
+      // className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border border-gray-800 bg-gradient-to-r from-black to-gray-950 px-8 py-10 shadow-2xl cursor-pointer"
+      className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-xl border border-pink-200 px-8 py-10 shadow-lg hover:shadow-pink-50/80 transition-all duration-300 cursor-pointer"
+
+
     >
       <div
         className="pointer-events-none absolute -inset-px opacity-0 transition duration-300"
         style={{
           opacity,
-          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(255,182,255,.1), transparent 40%)`,
+          background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(252, 156, 204, 0.25), transparent 40%)`,
         }}
       />
 
@@ -85,6 +90,17 @@ export const CardSpotlight = ({
             {des}
           </p>
         </div>
+
+        {/* Project preview image */}
+        {preview && (
+          <div className="mt-4 overflow-hidden rounded-lg border border-pink-100 shadow-sm">
+            <img
+              src={preview}
+              alt={`${title} preview`}
+              className="w-full h-48 object-cover hover:scale-105 transition-transform duration-500 ease-in-out"
+            />
+          </div>
+        )}
 
         <div className="flex items-center justify-between mt-7 mb-3">
           <div className="flex items-center">
@@ -107,10 +123,10 @@ export const CardSpotlight = ({
               rel="noopener noreferrer"
               onClick={handleLiveLinkClick}
             >
-              <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+              <p className="flex lg:text-xl md:text-xs text-sm text-pink-400">
                 Check Live Site
               </p>
-              <FaLocationArrow className="ms-3" color="#CBACF9" />
+              <FaLocationArrow className="ms-3" color="pink-400" />
             </a>
           )}
         </div>
