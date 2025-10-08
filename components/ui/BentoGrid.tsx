@@ -171,7 +171,7 @@ export const BentoGridItem = ({
                 handleClick={() => {
                   // Assuming your resume is in the public folder
                   const link = document.createElement("a");
-                  link.href = "/Afreen_Ahmed_Resume_SWE.pdf"; // replace with your actual file name
+                  link.href = "./Afreen_Ahmed_Resume_SWE.pdf"; // replace with your actual file name
                   link.download = "Afreen_Ahmed_resume.pdf";
                   link.click();
                 }}

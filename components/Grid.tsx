@@ -5,13 +5,7 @@ import { BentoGrid, BentoGridItem } from './ui/BentoGrid'
 import { motionProps } from '@/lib/utils/animation'
 
 const Grid = () => {
-    const handleDownload = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/Afreen_Ahmed_Resume_SWE.pdf';
-    }
-  };
-
-    useEffect(() => {
+      useEffect(() => {
         console.log(`gridItems length: ${gridItems.length}`)
     }, [])
 
