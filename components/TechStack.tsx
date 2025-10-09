@@ -110,6 +110,7 @@ export default function TechStack() {
       { name: "NoSQL", level: 85 },
       { name: "PostgreSQL", level: 80 },
       { name: "Oracle DB", level: 70 },
+      { name: "Firebase", level: 70 },
     ].sort((a, b) => b.level - a.level),
   },
   tools: {

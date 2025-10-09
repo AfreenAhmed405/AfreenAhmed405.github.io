@@ -205,7 +205,7 @@ export const certificates = [
       title: "SepaThon - Hackathon Winner",
       issuer: "JP Morgan Chase & Co.",
       date: "Nov 2022",
-      preview: "./cfg.jpg",
+      preview: "./sep.jpg",
     },
     {
       title: "Internet of Things Community Chairperson",
@@ -217,7 +217,7 @@ export const certificates = [
       title: "Code for Good - Hackathon Winner",
       issuer: "JP Morgan Chase & Co.",
       date: "May 2021",
-      preview: "./sep.jpg",
+      preview: "./cfg.jpg",
     },
     {
       title: "Programme Representative ECE",
